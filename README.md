@@ -11,11 +11,11 @@ KanbanGPT는 **개발 생산성 향상**을 위해 칸반 보드와 Chat GPT를 
 
 **개발 이슈를 칸반보드를 통해 관리**하고 GPT를 이용하여 **요구사항을 구현한 코드를 즉시 생성**할 수 있도록 구현되었습니다.
 
-
 ## 🌐 URL
 
 [KanbanGPT](https://kanban-gpt.vercel.app/)
 
+<br />
 
 ## ⚒️ Tech Stack
 
