@@ -1,8 +1,6 @@
-import { Suspense } from 'react';
-import { ErrorBoundary } from 'react-error-boundary';
 import { Outlet } from 'react-router-dom';
 
-import ErrorFallback from '@/components/common/ErrorFallback';
+import AsyncBoundary from '@/components/common/AsyncBoundary';
 import Header from '@/components/common/Header';
 import Navbar from '@/components/common/Navbar';
 import SkeletonBoard from '@/components/common/SkeletonBoard';
@@ -17,11 +15,9 @@ export default function Layout() {
       <Header onToggle={toggle} />
       <Navbar isNavOpen={isToggled} onToggle={toggle} />
 
-      <ErrorBoundary FallbackComponent={ErrorFallback}>
-        <Suspense fallback={<SkeletonBoard />}>
-          <Outlet />
-        </Suspense>
-      </ErrorBoundary>
+      <AsyncBoundary suspenseFallback={<SkeletonBoard />}>
+        <Outlet />
+      </AsyncBoundary>
 
       <ModalContainer />
       <ToastContainer />
