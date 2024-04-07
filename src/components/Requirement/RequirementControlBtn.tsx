@@ -10,8 +10,8 @@ import { theme, ThemeType } from '@/styles/theme';
 import { RequirementStateType } from '@/types/requirement';
 import { copyText, generateSearchPrompt } from '@/utils/gpt';
 
-import DeleteHoverBtn from '../common/DeleteHoverBtn';
-import HoverIcon from '../common/HoverIcon';
+import DeleteHoverBtn from '../Shared/DeleteHoverBtn';
+import HoverIcon from '../Shared/HoverIcon';
 import GPTGenerateCodeBtn from '../gpt/GPTGenerateCodeBtn';
 import SearchIcon from '../icons/SearchIcon';
 import DeleteConfirmation from '../Toast/DeleteConfirmation';

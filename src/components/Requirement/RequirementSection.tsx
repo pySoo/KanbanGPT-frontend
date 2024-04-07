@@ -7,7 +7,7 @@ import useResize from '@/hooks/useResize';
 import { theme } from '@/styles/theme';
 import { RequirementStateType } from '@/types/requirement';
 
-import ResizeHandle from '../common/ResizeHandle';
+import ResizeHandle from '../Shared/ResizeHandle';
 import GPTPrompt from '../gpt/GptPrompt';
 import RequirementList from './RequirementList';
 

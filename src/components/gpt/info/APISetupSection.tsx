@@ -1,4 +1,4 @@
-import RoundedBtn from '@/components/common/RoundedBtn';
+import RoundedBtn from '@/components/Shared/RoundedBtn';
 
 import APIKeyForm from './APIKeyForm';
 

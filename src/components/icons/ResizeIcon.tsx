@@ -1,6 +1,6 @@
 import { BsArrowsExpand } from 'react-icons/bs';
 
-import { DirectionType } from '../common/ResizeHandle';
+import { DirectionType } from '../Shared/ResizeHandle';
 
 type ResizeIconProps = {
   size?: number;

@@ -6,8 +6,8 @@ import { useRequirement } from '@/hooks/useRequirement';
 import { theme, ThemeType } from '@/styles/theme';
 import { RequirementStateType } from '@/types/requirement';
 
-import HoverIcon from '../common/HoverIcon';
-import Textarea from '../common/Textarea';
+import HoverIcon from '../Shared/HoverIcon';
+import Textarea from '../Shared/Textarea';
 import EmptyCircleIcon from '../icons/EmptyCircleIcon';
 import PlusIcon from '../icons/PlusIcon';
 
