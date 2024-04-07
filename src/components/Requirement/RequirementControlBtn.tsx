@@ -13,7 +13,7 @@ import { copyText, generateSearchPrompt } from '@/utils/gpt';
 import DeleteHoverBtn from '../Shared/Button/DeleteHoverBtn';
 import HoverIcon from '../Shared/HoverIcon';
 import GPTGenerateCodeBtn from '../gpt/GPTGenerateCodeBtn';
-import SearchIcon from '../icons/SearchIcon';
+import SearchIcon from '../Shared/Icons/SearchIcon';
 import DeleteConfirmation from '../Toast/DeleteConfirmation';
 
 type RequirementControlBtnProps = {

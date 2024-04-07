@@ -5,8 +5,8 @@ import { useRequirement } from '@/hooks/useRequirement';
 import { RequirementStateType } from '@/types/requirement';
 
 import CheckLottie from '../Shared/CheckLottie';
-import CheckCircleIcon from '../icons/CheckCircleIcon';
-import EmptyCircleIcon from '../icons/EmptyCircleIcon';
+import CheckCircleIcon from '../Shared/Icons/CheckCircleIcon';
+import EmptyCircleIcon from '../Shared/Icons/EmptyCircleIcon';
 
 type RequirementCheckToggle = {
   requirement: RequirementStateType;

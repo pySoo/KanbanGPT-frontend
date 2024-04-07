@@ -3,7 +3,7 @@ import { PanelResizeHandle } from 'react-resizable-panels';
 
 import { theme, ThemeType } from '@/styles/theme';
 
-import ResizeIcon from '../icons/ResizeIcon';
+import ResizeIcon from './Icons/ResizeIcon';
 
 export type DirectionType = 'horizontal' | 'vertical';
 

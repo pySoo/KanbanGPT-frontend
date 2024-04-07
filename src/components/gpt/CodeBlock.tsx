@@ -10,8 +10,8 @@ import useTimer from '@/hooks/useTimer';
 import { theme, ThemeType } from '@/styles/theme';
 import { copyText } from '@/utils/gpt';
 
-import CheckIcon from '../icons/CheckIcon';
-import CopyIcon from '../icons/CopyIcon';
+import CheckIcon from '../Shared/Icons/CheckIcon';
+import CopyIcon from '../Shared/Icons/CopyIcon';
 
 type CodeBlockProps = {
   code: string;

@@ -8,8 +8,8 @@ import { RequirementStateType } from '@/types/requirement';
 
 import HoverIcon from '../Shared/HoverIcon';
 import Textarea from '../Shared/Textarea';
-import EmptyCircleIcon from '../icons/EmptyCircleIcon';
-import PlusIcon from '../icons/PlusIcon';
+import EmptyCircleIcon from '../Shared/Icons/EmptyCircleIcon';
+import PlusIcon from '../Shared/Icons/PlusIcon';
 
 type RequirementInputProps = {
   issueId: string;

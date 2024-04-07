@@ -1,11 +1,11 @@
 import { Outlet } from 'react-router-dom';
 
+import ModalContainer from '@/components/Modal/ModalContainer';
 import AsyncBoundary from '@/components/Shared/AsyncBoundary';
 import Header from '@/components/Shared/Header';
 import Navbar from '@/components/Shared/Navbar';
 import SkeletonBoard from '@/components/Shared/Skeleton/SkeletonBoard';
 import ToastContainer from '@/components/Shared/ToastContainer';
-import ModalContainer from '@/components/Modal/ModalContainer';
 import { useToggle } from '@/hooks/useToggle';
 
 export default function Layout() {

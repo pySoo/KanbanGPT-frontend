@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 
-import GPTInfoIcon from '../icons/GPTInfoIcon';
-import MenuIcon from '../icons/MenuIcon';
+import GPTInfoIcon from './Icons/GPTInfoIcon';
+import MenuIcon from './Icons/MenuIcon';
 import HoverIcon from './HoverIcon';
 
 type HeaderProps = {

@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import { theme, ThemeType } from '@/styles/theme';
 
 import HoverIcon from '../Shared/HoverIcon';
-import PlusIcon from '../icons/PlusIcon';
+import PlusIcon from '../Shared/Icons/PlusIcon';
 
 export default function CreateIssueBtn({ ...props }: React.ComponentProps<'button'>) {
   return (

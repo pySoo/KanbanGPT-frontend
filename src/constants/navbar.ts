@@ -1,5 +1,5 @@
-import CodeIcon from '@/components/icons/CodeIcon';
-import DashBoardIcon from '@/components/icons/DashBoardIcon';
+import CodeIcon from '@/components/Shared/Icons/CodeIcon';
+import DashBoardIcon from '@/components/Shared/Icons/DashBoardIcon';
 
 import { path } from '../routes/path';
 
