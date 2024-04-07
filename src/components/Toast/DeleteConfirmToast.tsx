@@ -4,11 +4,11 @@ import { useSetRecoilState } from 'recoil';
 import deleteStateAtom from '@/atoms/deleteStateAtom';
 import { theme, ThemeType } from '@/styles/theme';
 
-type DeleteConfirmationProps = {
+type DeleteConfirmToastProps = {
   id: string;
 };
 
-export default function DeleteConfirmation({ id }: DeleteConfirmationProps) {
+export default function DeleteConfirmToast({ id }: DeleteConfirmToastProps) {
   const setDelete = useSetRecoilState(deleteStateAtom(id));
 
   const handleClick = () => {
@@ -16,7 +16,7 @@ export default function DeleteConfirmation({ id }: DeleteConfirmationProps) {
   };
 
   return (
-    <div css={deleteConfirmationStyle(theme)}>
+    <div css={deleteConfirmToastStyle(theme)}>
       <p>정말 삭제하시겠어요?</p>
       <button aria-label="delete-btn" onClick={handleClick}>
         삭제하기
@@ -25,7 +25,7 @@ export default function DeleteConfirmation({ id }: DeleteConfirmationProps) {
   );
 }
 
-const deleteConfirmationStyle = (theme: ThemeType) => css`
+const deleteConfirmToastStyle = (theme: ThemeType) => css`
   display: flex;
   flex-direction: column;
   gap: 10px;

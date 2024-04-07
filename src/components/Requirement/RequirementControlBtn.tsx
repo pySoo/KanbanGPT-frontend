@@ -10,11 +10,11 @@ import { theme, ThemeType } from '@/styles/theme';
 import { RequirementStateType } from '@/types/requirement';
 import { copyText, generateSearchPrompt } from '@/utils/gpt';
 
+import GPTGenerateCodeBtn from '../gpt/GPTGenerateCodeBtn';
 import DeleteHoverBtn from '../Shared/Button/DeleteHoverBtn';
 import HoverIcon from '../Shared/HoverIcon';
-import GPTGenerateCodeBtn from '../gpt/GPTGenerateCodeBtn';
 import SearchIcon from '../Shared/Icons/SearchIcon';
-import DeleteConfirmation from '../Toast/DeleteConfirmation';
+import DeleteConfirmToast from '../Toast/DeleteConfirmToast';
 
 type RequirementControlBtnProps = {
   requirement: RequirementStateType;
@@ -45,7 +45,7 @@ export default function RequirementControlBtn({
   };
 
   const handleDelete = () => {
-    toast.warn(<DeleteConfirmation id={requirement.id} />);
+    toast.warn(<DeleteConfirmToast id={requirement.id} />);
   };
 
   useEffect(() => {

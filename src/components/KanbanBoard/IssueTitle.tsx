@@ -8,7 +8,7 @@ import { useIssue } from '@/hooks/useIssue';
 import { IssueStateType } from '@/types/issue';
 
 import DeleteHoverBtn from '../Shared/Button/DeleteHoverBtn';
-import DeleteConfirmation from '../Toast/DeleteConfirmation';
+import DeleteConfirmToast from '../Toast/DeleteConfirmToast';
 import IssueInput from './IssueInput';
 
 type IssueTitleProps = {
@@ -25,7 +25,7 @@ export default function IssueTitle({ issue, autoFocus, onBlur, onCreateIssue }: 
 
   const handleIssueDelete = () => {
     if (!issue) return;
-    toast.warn(<DeleteConfirmation id={issue.id} />);
+    toast.warn(<DeleteConfirmToast id={issue.id} />);
   };
 
   useEffect(() => {
