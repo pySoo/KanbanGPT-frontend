@@ -5,7 +5,7 @@ import { useRecoilState } from 'recoil';
 
 import { postCodeGeneration } from '@/api/gpt';
 import loadingStateAtom from '@/atoms/loadingStateAtom';
-import RoundedBtn from '@/components/Shared/RoundedBtn';
+import RoundedBtn from '@/components/Shared/Button/RoundedBtn';
 import useConnectGpt from '@/hooks/useConnectGpt';
 import { theme } from '@/styles/theme';
 

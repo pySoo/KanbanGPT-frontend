@@ -1,4 +1,4 @@
-import RoundedBtn from '@/components/Shared/RoundedBtn';
+import RoundedBtn from '@/components/Shared/Button/RoundedBtn';
 
 export default function APIInfoSection() {
   const handleOpenUsagePage = () => {

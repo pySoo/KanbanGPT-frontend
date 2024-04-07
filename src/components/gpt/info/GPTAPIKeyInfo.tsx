@@ -1,4 +1,4 @@
-import RoundedBtn from '@/components/Shared/RoundedBtn';
+import RoundedBtn from '@/components/Shared/Button/RoundedBtn';
 import { useModal } from '@/hooks/useModal';
 import { ModalType } from '@/types/modal';
 

@@ -7,7 +7,7 @@ import deleteStateAtom from '@/atoms/deleteStateAtom';
 import { useIssue } from '@/hooks/useIssue';
 import { IssueStateType } from '@/types/issue';
 
-import DeleteHoverBtn from '../Shared/DeleteHoverBtn';
+import DeleteHoverBtn from '../Shared/Button/DeleteHoverBtn';
 import DeleteConfirmation from '../Toast/DeleteConfirmation';
 import IssueInput from './IssueInput';
 

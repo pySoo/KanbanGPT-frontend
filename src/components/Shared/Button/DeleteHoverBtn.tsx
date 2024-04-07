@@ -2,8 +2,8 @@ import { css } from '@emotion/react';
 
 import { theme, ThemeType } from '@/styles/theme';
 
-import DeleteIcon from '../icons/DeleteIcon';
-import HoverIcon from './HoverIcon';
+import DeleteIcon from '../../icons/DeleteIcon';
+import HoverIcon from '../HoverIcon';
 
 interface DeleteHoverBtnProps extends React.ComponentProps<'button'> {
   iconSize?: number;

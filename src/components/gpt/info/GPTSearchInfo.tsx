@@ -1,7 +1,7 @@
 import { useRecoilValue } from 'recoil';
 
 import { devEnvironmentAtom } from '@/atoms/devEnvironmentAtom';
-import RoundedBtn from '@/components/Shared/RoundedBtn';
+import RoundedBtn from '@/components/Shared/Button/RoundedBtn';
 import { theme } from '@/styles/theme';
 import { RequirementStateType } from '@/types/requirement';
 import { copyText, generateSearchPrompt } from '@/utils/gpt';
