@@ -5,10 +5,10 @@ import { theme, ThemeType } from '@/styles/theme';
 
 export default function CodeArchive() {
   return (
-    <main css={codeArchiveStyle(theme)}>
+    <div css={codeArchiveStyle(theme)}>
       <h1 className="code-archive-title">CODE ARCHIVE</h1>
       <CodeArchiveList />
-    </main>
+    </div>
   );
 }
 
