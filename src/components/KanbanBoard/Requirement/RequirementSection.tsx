@@ -7,8 +7,8 @@ import useResize from '@/hooks/useResize';
 import { theme } from '@/styles/theme';
 import { RequirementStateType } from '@/types/requirement';
 
-import ResizeHandle from '../Shared/ResizeHandle';
-import GPTPrompt from '../Gpt/GptPrompt';
+import ResizeHandle from '../../Shared/ResizeHandle';
+import GPTPrompt from '../../Gpt/GptPrompt';
 import RequirementList from './RequirementList';
 
 type RequirementSectionProps = {

@@ -4,7 +4,7 @@ import { theme, ThemeType } from '@/styles/theme';
 import { RequirementStateType } from '@/types/requirement';
 
 import EllipsisIcon from '../Shared/Icons/EllipsisIcon';
-import RequirementCheckToggle from '../Requirement/RequirementCheckToggle';
+import RequirementCheckToggle from './Requirement/RequirementCheckToggle';
 
 type IssuePreviewListProps = {
   requirements: RequirementStateType[];

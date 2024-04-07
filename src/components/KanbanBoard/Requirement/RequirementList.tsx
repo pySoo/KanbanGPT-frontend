@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 
 import { RequirementStateType } from '@/types/requirement';
 
-import RequirementItem from '../Requirement/RequirementItem';
+import RequirementItem from './RequirementItem';
 import RequirementInput from './RequirementInput';
 
 type RequirementListProps = {

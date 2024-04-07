@@ -9,7 +9,7 @@ import { IssueStateType } from '@/types/issue';
 import { ModalType } from '@/types/modal';
 
 import IssueInfo from '../KanbanBoard/IssueInfo';
-import RequirementSection from '../Requirement/RequirementSection';
+import RequirementSection from '../KanbanBoard/Requirement/RequirementSection';
 
 export default function IssueModal() {
   const { getIssueById } = useIssue();

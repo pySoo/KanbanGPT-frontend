@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react';
 import { useRequirement } from '@/hooks/useRequirement';
 import { RequirementStateType } from '@/types/requirement';
 
-import CheckLottie from '../Shared/CheckLottie';
-import CheckCircleIcon from '../Shared/Icons/CheckCircleIcon';
-import EmptyCircleIcon from '../Shared/Icons/EmptyCircleIcon';
+import CheckLottie from '../../Shared/CheckLottie';
+import CheckCircleIcon from '../../Shared/Icons/CheckCircleIcon';
+import EmptyCircleIcon from '../../Shared/Icons/EmptyCircleIcon';
 
 type RequirementCheckToggle = {
   requirement: RequirementStateType;
