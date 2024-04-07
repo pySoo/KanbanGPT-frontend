@@ -7,7 +7,7 @@ import { RequirementStateType } from '@/types/requirement';
 
 import CodeBlock from './CodeBlock';
 import GPTLoading from './GPTLoading';
-import GPTSearchInfo from './info/GPTSearchInfo';
+import GPTSearchInfo from './Information/GPTSearchInfo';
 
 type ConnectedPromptProps = {
   requirement?: RequirementStateType;
