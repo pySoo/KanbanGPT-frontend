@@ -4,7 +4,7 @@ import { ReactNode, useEffect } from 'react';
 import { ModalType } from '@/types/modal';
 import { bodyScroll } from '@/utils/scroll';
 
-import CloseIcon from '../icons/CloseIcon';
+import CloseIcon from '../Shared/Icons/CloseIcon';
 
 interface BaseModalProps extends React.ComponentProps<'div'> {
   type: ModalType;
