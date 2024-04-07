@@ -5,7 +5,7 @@ import AsyncBoundary from '@/components/Shared/AsyncBoundary';
 import Header from '@/components/Shared/Header';
 import Navbar from '@/components/Shared/Navbar';
 import SkeletonBoard from '@/components/Shared/Skeleton/SkeletonBoard';
-import ToastContainer from '@/components/Shared/ToastContainer';
+import ToastContainer from '@/components/Shared/Toast/ToastContainer';
 import { useToggle } from '@/hooks/useToggle';
 
 export default function Layout() {

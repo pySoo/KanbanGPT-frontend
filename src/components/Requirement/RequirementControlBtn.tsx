@@ -14,7 +14,7 @@ import GPTGenerateCodeBtn from '../gpt/GPTGenerateCodeBtn';
 import DeleteHoverBtn from '../Shared/Button/DeleteHoverBtn';
 import HoverIcon from '../Shared/HoverIcon';
 import SearchIcon from '../Shared/Icons/SearchIcon';
-import DeleteConfirmToast from '../Toast/DeleteConfirmToast';
+import DeleteConfirmToast from '../Shared/Toast/DeleteConfirmToast';
 
 type RequirementControlBtnProps = {
   requirement: RequirementStateType;
