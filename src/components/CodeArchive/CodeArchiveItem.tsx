@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import { theme, ThemeType } from '@/styles/theme';
 import { RequirementStateType } from '@/types/requirement';
 
-import CodeBlock from '../gpt/CodeBlock';
+import CodeBlock from '../Gpt/CodeBlock';
 import Label from '../Shared/Label';
 
 type CodeArchiveItemProps = {
