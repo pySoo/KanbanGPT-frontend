@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 
 import { theme, ThemeType } from '@/styles/theme';
 
-import DevEnvironmentForm from '../DevEnvironmentForm';
+import DevEnvironmentForm from './DevEnvironmentForm';
 
 type IssueInfoProps = {
   issueTitle: string;
