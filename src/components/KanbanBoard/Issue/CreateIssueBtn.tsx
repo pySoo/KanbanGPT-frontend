@@ -2,8 +2,8 @@ import { css } from '@emotion/react';
 
 import { theme, ThemeType } from '@/styles/theme';
 
-import HoverIcon from '../Shared/Icons/HoverIcon';
-import PlusIcon from '../Shared/Icons/PlusIcon';
+import HoverIcon from '../../Shared/Icons/HoverIcon';
+import PlusIcon from '../../Shared/Icons/PlusIcon';
 
 export default function CreateIssueBtn({ ...props }: React.ComponentProps<'button'>) {
   return (

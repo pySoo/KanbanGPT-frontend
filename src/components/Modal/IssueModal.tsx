@@ -8,7 +8,7 @@ import { theme, ThemeType } from '@/styles/theme';
 import { IssueStateType } from '@/types/issue';
 import { ModalType } from '@/types/modal';
 
-import IssueInfo from '../KanbanBoard/IssueInfo';
+import IssueInfo from '../KanbanBoard/Issue/IssueInfo';
 import RequirementSection from '../KanbanBoard/Requirement/RequirementSection';
 
 export default function IssueModal() {

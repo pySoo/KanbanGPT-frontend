@@ -8,7 +8,7 @@ import { theme, ThemeType } from '@/styles/theme';
 import { IssueStateType } from '@/types/issue';
 import { ModalType } from '@/types/modal';
 
-import GPTIcon from '../Shared/Icons/GPTIcon';
+import GPTIcon from '../../Shared/Icons/GPTIcon';
 import IssuePreviewList from './IssuePreviewList';
 import IssueTitle from './IssueTitle';
 

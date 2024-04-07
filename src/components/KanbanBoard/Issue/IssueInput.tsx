@@ -6,7 +6,7 @@ import { useIssue } from '@/hooks/useIssue';
 import { theme, ThemeType } from '@/styles/theme';
 import { IssueStateType } from '@/types/issue';
 
-import Textarea from '../Shared/Textarea';
+import Textarea from '../../Shared/Textarea';
 
 export interface IssueInputProps extends React.ComponentProps<'form'> {
   issue?: IssueStateType;
