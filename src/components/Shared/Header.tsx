@@ -1,8 +1,8 @@
 import { css } from '@emotion/react';
 
 import GPTInfoIcon from './Icons/GPTInfoIcon';
-import MenuIcon from './Icons/MenuIcon';
 import HoverIcon from './Icons/HoverIcon';
+import MenuIcon from './Icons/MenuIcon';
 
 type HeaderProps = {
   onToggle: () => void;

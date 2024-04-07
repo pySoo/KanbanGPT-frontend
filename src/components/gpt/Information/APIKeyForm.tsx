@@ -4,9 +4,9 @@ import { toast } from 'react-toastify';
 import { useRecoilState } from 'recoil';
 
 import { gptAtom } from '@/atoms/gptAtom';
-import HoverIcon from '@/components/Shared/Icons/HoverIcon';
 import CheckIcon from '@/components/Shared/Icons/CheckIcon';
 import DeleteIcon from '@/components/Shared/Icons/DeleteIcon';
+import HoverIcon from '@/components/Shared/Icons/HoverIcon';
 import useInput from '@/hooks/useInput';
 import { theme, ThemeType } from '@/styles/theme';
 
