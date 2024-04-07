@@ -5,7 +5,7 @@ import { useModal } from '@/hooks/useModal';
 import { theme, ThemeType } from '@/styles/theme';
 import { ModalType } from '@/types/modal';
 
-import HoverIcon from '../HoverIcon';
+import HoverIcon from './HoverIcon';
 
 export default function GPTInfoIcon({ ...props }: React.ComponentProps<'div'>) {
   const { openModal } = useModal();

@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 
 import GPTInfoIcon from './Icons/GPTInfoIcon';
 import MenuIcon from './Icons/MenuIcon';
-import HoverIcon from './HoverIcon';
+import HoverIcon from './Icons/HoverIcon';
 
 type HeaderProps = {
   onToggle: () => void;

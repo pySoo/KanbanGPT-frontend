@@ -12,7 +12,7 @@ import { copyText, generateSearchPrompt } from '@/utils/gpt';
 
 import GPTGenerateCodeBtn from '../gpt/GPTGenerateCodeBtn';
 import DeleteHoverBtn from '../Shared/Button/DeleteHoverBtn';
-import HoverIcon from '../Shared/HoverIcon';
+import HoverIcon from '../Shared/Icons/HoverIcon';
 import SearchIcon from '../Shared/Icons/SearchIcon';
 import DeleteConfirmToast from '../Shared/Toast/DeleteConfirmToast';
 

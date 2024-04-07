@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import { theme, ThemeType } from '@/styles/theme';
 
 import DeleteIcon from '../Icons/DeleteIcon';
-import HoverIcon from '../HoverIcon';
+import HoverIcon from '../Icons/HoverIcon';
 
 interface DeleteHoverBtnProps extends React.ComponentProps<'button'> {
   iconSize?: number;
