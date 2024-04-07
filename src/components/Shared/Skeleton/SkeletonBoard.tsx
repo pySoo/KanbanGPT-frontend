@@ -5,8 +5,8 @@ import BaseSkeleton from './BaseSkeleton';
 export default function SkeletonBoard() {
   return (
     <ul css={wrapperStyle}>
-      {Array.from({ length: 3 }).map(() => (
-        <li css={skeletonBoardStyle}>
+      {Array.from({ length: 3 }).map((_, index) => (
+        <li key={index} css={skeletonBoardStyle}>
           <BaseSkeleton />
         </li>
       ))}
