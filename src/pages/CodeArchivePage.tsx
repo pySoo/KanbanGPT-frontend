@@ -1,28 +1,30 @@
 import { css } from '@emotion/react';
 
-import KanbanBoard from '@/components/KanbanBoard/KanbanBoard';
+import CodeArchiveList from '@/components/CodeArchive/CodeArchiveList';
 import { theme, ThemeType } from '@/styles/theme';
 
-export default function Main() {
+export default function CodeArchivePage() {
   return (
-    <main css={mainPageStyle(theme)}>
-      <h1 className="kanban-title">ISSUE BOARD</h1>
-      <KanbanBoard />
-    </main>
+    <div css={codeArchiveStyle(theme)}>
+      <h1 className="code-archive-title">CODE ARCHIVE</h1>
+      <CodeArchiveList />
+    </div>
   );
 }
 
-const mainPageStyle = (theme: ThemeType) => css`
+const codeArchiveStyle = (theme: ThemeType) => css`
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  color: ${theme.colors.text};
 
-  .kanban-title {
+  .code-archive-title {
     font-size: 1.6rem;
     margin-bottom: 10px;
     font-weight: 700;
     color: ${theme.colors.done};
+
     :hover {
       color: ${theme.colors.primary};
     }
