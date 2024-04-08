@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import { useRequirement } from '@/hooks/useRequirement';
 
 import CodeArchiveInfo from './CodeArchiveInfo';
-import CodeArchiveItem from './CodeArchiveItem';
+import CodeArchiveList from './CodeArchiveList';
 
 export default function CodeArchiveSection() {
   const { requireList } = useRequirement();
@@ -12,9 +12,7 @@ export default function CodeArchiveSection() {
   return (
     <section css={codeArchiveListStyle}>
       {requireListWithCode.length === 0 && <CodeArchiveInfo />}
-      {requireListWithCode.map((requirement) => (
-        <CodeArchiveItem key={requirement.id} requirement={requirement} />
-      ))}
+      {requireListWithCode.length > 0 && <CodeArchiveList requireList={requireListWithCode} />}
     </section>
   );
 }
