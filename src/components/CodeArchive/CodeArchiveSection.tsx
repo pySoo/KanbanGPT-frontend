@@ -5,17 +5,17 @@ import { useRequirement } from '@/hooks/useRequirement';
 import CodeArchiveInfo from './CodeArchiveInfo';
 import CodeArchiveItem from './CodeArchiveItem';
 
-export default function CodeArchiveList() {
+export default function CodeArchiveSection() {
   const { requireList } = useRequirement();
   const requireListWithCode = requireList.filter((requirement) => requirement.gpt);
 
   return (
-    <ul css={codeArchiveListStyle}>
+    <section css={codeArchiveListStyle}>
       {requireListWithCode.length === 0 && <CodeArchiveInfo />}
       {requireListWithCode.map((requirement) => (
         <CodeArchiveItem key={requirement.id} requirement={requirement} />
       ))}
-    </ul>
+    </section>
   );
 }
 
