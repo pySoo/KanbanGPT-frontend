@@ -7,16 +7,14 @@ import CodeArchiveItem from './CodeArchiveItem';
 
 export default function CodeArchiveList() {
   const { requireList } = useRequirement();
-  const requirementsWithCode = requireList.filter((requirement) => requirement.gpt);
+  const requireListWithCode = requireList.filter((requirement) => requirement.gpt);
+
   return (
     <ul css={codeArchiveListStyle}>
-      {requirementsWithCode.length > 0 ? (
-        requirementsWithCode.map((requirement) => (
-          <CodeArchiveItem key={requirement.id} requirement={requirement} />
-        ))
-      ) : (
-        <CodeArchiveInfo />
-      )}
+      {requireListWithCode.length === 0 && <CodeArchiveInfo />}
+      {requireListWithCode.map((requirement) => (
+        <CodeArchiveItem key={requirement.id} requirement={requirement} />
+      ))}
     </ul>
   );
 }
