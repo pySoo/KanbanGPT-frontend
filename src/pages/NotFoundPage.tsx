@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { path } from '@/routes/path';
 
-export default function NotFound() {
+export default function NotFoundPage() {
   const navigate = useNavigate();
 
   const handleNavigateToMain = () => {

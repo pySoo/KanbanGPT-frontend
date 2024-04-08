@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import KanbanBoard from '@/components/KanbanBoard/KanbanBoard';
 import { theme, ThemeType } from '@/styles/theme';
 
-export default function Main() {
+export default function MainPage() {
   return (
     <main css={mainPageStyle(theme)}>
       <h1 className="kanban-title">ISSUE BOARD</h1>

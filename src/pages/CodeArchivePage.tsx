@@ -1,13 +1,13 @@
 import { css } from '@emotion/react';
 
-import CodeArchiveList from '@/components/CodeArchive/CodeArchiveList';
+import CodeArchiveSection from '@/components/CodeArchive/CodeArchiveSection';
 import { theme, ThemeType } from '@/styles/theme';
 
-export default function CodeArchive() {
+export default function CodeArchivePage() {
   return (
     <div css={codeArchiveStyle(theme)}>
       <h1 className="code-archive-title">CODE ARCHIVE</h1>
-      <CodeArchiveList />
+      <CodeArchiveSection />
     </div>
   );
 }
