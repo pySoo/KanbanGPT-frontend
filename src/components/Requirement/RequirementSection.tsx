@@ -5,7 +5,7 @@ import { Panel, PanelGroup } from 'react-resizable-panels';
 import { useRequirement } from '@/hooks/useRequirement';
 import useResize from '@/hooks/useResize';
 import { theme } from '@/styles/theme';
-import { RequirementStateType } from '@/types/requirement';
+import { Requirement } from '@/types/requirement';
 
 import ResizeHandle from '../common/ResizeHandle';
 import GPTPrompt from '../gpt/GptPrompt';
@@ -20,9 +20,7 @@ export default function RequirementSection({ selectedIssueId }: RequirementSecti
   const panelDirection = width > theme.screens.md ? 'horizontal' : 'vertical';
 
   const [selectedRequireId, setSelectedRequireId] = useState<string | undefined>(undefined);
-  const [selectedRequire, setSelectedRequire] = useState<RequirementStateType | undefined>(
-    undefined,
-  );
+  const [selectedRequire, setSelectedRequire] = useState<Requirement | undefined>(undefined);
   const { getRequireByIssueId } = useRequirement();
 
   const requirementList = getRequireByIssueId({ issueId: selectedIssueId });

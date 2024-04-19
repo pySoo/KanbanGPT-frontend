@@ -3,14 +3,14 @@ import { useRecoilValue } from 'recoil';
 
 import loadingStateAtom from '@/atoms/loadingStateAtom';
 import { theme, ThemeType } from '@/styles/theme';
-import { RequirementStateType } from '@/types/requirement';
+import { Requirement } from '@/types/requirement';
 
 import CodeBlock from './CodeBlock';
 import GPTLoading from './GPTLoading';
 import GPTSearchInfo from './info/GPTSearchInfo';
 
 type ConnectedPromptProps = {
-  requirement?: RequirementStateType;
+  requirement?: Requirement;
 };
 
 export default function ConnectedPrompt({ requirement }: ConnectedPromptProps) {

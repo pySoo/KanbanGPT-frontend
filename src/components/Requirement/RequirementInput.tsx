@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import useInput from '@/hooks/useInput';
 import { useRequirement } from '@/hooks/useRequirement';
 import { theme, ThemeType } from '@/styles/theme';
-import { RequirementStateType } from '@/types/requirement';
+import { Requirement } from '@/types/requirement';
 
 import HoverIcon from '../common/HoverIcon';
 import Textarea from '../common/Textarea';
@@ -13,7 +13,7 @@ import PlusIcon from '../icons/PlusIcon';
 
 type RequirementInputProps = {
   issueId: string;
-  requirement?: RequirementStateType;
+  requirement?: Requirement;
   autoFocus?: boolean;
   onSelectId: (id?: string) => void;
 };

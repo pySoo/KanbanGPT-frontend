@@ -1,13 +1,13 @@
 import { css } from '@emotion/react';
 
-import { RequirementStateType } from '@/types/requirement';
+import { Requirement } from '@/types/requirement';
 
 import RequirementItem from '../Requirement/RequirementItem';
 import RequirementInput from './RequirementInput';
 
 type RequirementListProps = {
   issueId: string;
-  requirements?: RequirementStateType[];
+  requirements?: Requirement[];
   onSelectId: (id?: string) => void;
 };
 

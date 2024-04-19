@@ -7,7 +7,7 @@ import deleteStateAtom from '@/atoms/deleteStateAtom';
 import { devEnvironmentAtom } from '@/atoms/devEnvironmentAtom';
 import { useRequirement } from '@/hooks/useRequirement';
 import { theme, ThemeType } from '@/styles/theme';
-import { RequirementStateType } from '@/types/requirement';
+import { Requirement } from '@/types/requirement';
 import { copyText, generateSearchPrompt } from '@/utils/gpt';
 
 import DeleteHoverBtn from '../common/DeleteHoverBtn';
@@ -17,7 +17,7 @@ import SearchIcon from '../icons/SearchIcon';
 import DeleteConfirmation from '../Toast/DeleteConfirmation';
 
 type RequirementControlBtnProps = {
-  requirement: RequirementStateType;
+  requirement: Requirement;
   onSelectId: (id?: string) => void;
 };
 

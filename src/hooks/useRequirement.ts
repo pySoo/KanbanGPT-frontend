@@ -2,11 +2,11 @@ import { produce } from 'immer';
 import { useRecoilState } from 'recoil';
 
 import { requirementAtom } from '@/atoms/requirementAtom';
-import { createRequireType, RequirementStateType, updateRequireType } from '@/types/requirement';
+import { createRequireType, Requirement, updateRequireType } from '@/types/requirement';
 import { createUniqueId } from '@/utils/uniqueId';
 
 export function useRequirement() {
-  const [requireList, setRequireList] = useRecoilState<RequirementStateType[]>(requirementAtom);
+  const [requireList, setRequireList] = useRecoilState<Requirement[]>(requirementAtom);
 
   const createRequire = ({ issueId, title }: createRequireType) => {
     const id = createUniqueId();

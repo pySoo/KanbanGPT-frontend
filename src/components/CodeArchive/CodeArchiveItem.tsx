@@ -1,13 +1,13 @@
 import { css } from '@emotion/react';
 
 import { theme, ThemeType } from '@/styles/theme';
-import { RequirementStateType } from '@/types/requirement';
+import { Requirement } from '@/types/requirement';
 
 import Label from '../common/Label';
 import CodeBlock from '../gpt/CodeBlock';
 
 type CodeArchiveItemProps = {
-  requirement: RequirementStateType;
+  requirement: Requirement;
 };
 
 export default function CodeArchiveItem({ requirement }: CodeArchiveItemProps) {

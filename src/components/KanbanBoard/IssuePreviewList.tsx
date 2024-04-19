@@ -1,13 +1,13 @@
 import { css } from '@emotion/react';
 
 import { theme, ThemeType } from '@/styles/theme';
-import { RequirementStateType } from '@/types/requirement';
+import { Requirement } from '@/types/requirement';
 
 import EllipsisIcon from '../icons/EllipsisIcon';
 import RequirementCheckToggle from '../Requirement/RequirementCheckToggle';
 
 type IssuePreviewListProps = {
-  requirements: RequirementStateType[];
+  requirements: Requirement[];
 };
 
 export default function IssuePreviewList({ requirements }: IssuePreviewListProps) {

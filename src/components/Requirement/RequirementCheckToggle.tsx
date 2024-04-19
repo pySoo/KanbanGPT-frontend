@@ -2,14 +2,14 @@ import { css } from '@emotion/react';
 import { useEffect, useState } from 'react';
 
 import { useRequirement } from '@/hooks/useRequirement';
-import { RequirementStateType } from '@/types/requirement';
+import { Requirement } from '@/types/requirement';
 
 import CheckLottie from '../common/CheckLottie';
 import CheckCircleIcon from '../icons/CheckCircleIcon';
 import EmptyCircleIcon from '../icons/EmptyCircleIcon';
 
 type RequirementCheckToggle = {
-  requirement: RequirementStateType;
+  requirement: Requirement;
 };
 
 export default function RequirementCheckToggle({ requirement }: RequirementCheckToggle) {

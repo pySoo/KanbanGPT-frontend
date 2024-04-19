@@ -3,11 +3,11 @@ import { useRecoilValue } from 'recoil';
 import { devEnvironmentAtom } from '@/atoms/devEnvironmentAtom';
 import RoundedBtn from '@/components/common/RoundedBtn';
 import { theme } from '@/styles/theme';
-import { RequirementStateType } from '@/types/requirement';
+import { Requirement } from '@/types/requirement';
 import { copyText, generateSearchPrompt } from '@/utils/gpt';
 
 type GPTSearchInfoProps = {
-  requirement?: RequirementStateType;
+  requirement?: Requirement;
 };
 export default function GPTSearchInfo({ requirement }: GPTSearchInfoProps) {
   const devState = useRecoilValue(devEnvironmentAtom);

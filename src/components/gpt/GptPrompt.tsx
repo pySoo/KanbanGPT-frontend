@@ -1,13 +1,13 @@
 import { css } from '@emotion/react';
 
 import useConnectGpt from '@/hooks/useConnectGpt';
-import { RequirementStateType } from '@/types/requirement';
+import { Requirement } from '@/types/requirement';
 
 import ConnectedPrompt from './ConnectedPrompt';
 import DisconnectedPrompt from './DisconnectedPrompt';
 
 type GPTPromptProps = {
-  requirement?: RequirementStateType;
+  requirement?: Requirement;
 };
 
 export default function GPTPrompt({ requirement }: GPTPromptProps) {

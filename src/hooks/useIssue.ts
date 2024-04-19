@@ -4,12 +4,12 @@ import { useRecoilState } from 'recoil';
 import { issueAtom } from '@/atoms/issueAtom';
 import { requirementAtom } from '@/atoms/requirementAtom';
 import { createIssueProps, IssueDataType, IssueStatusType, updateIssueProps } from '@/types/issue';
-import { RequirementStateType } from '@/types/requirement';
+import { Requirement } from '@/types/requirement';
 import { createUniqueId } from '@/utils/uniqueId';
 
 export function useIssue() {
   const [issueData, setIssueData] = useRecoilState<IssueDataType>(issueAtom);
-  const [requireData, setRequireData] = useRecoilState<RequirementStateType[]>(requirementAtom);
+  const [requireData, setRequireData] = useRecoilState<Requirement[]>(requirementAtom);
 
   const createIssue = ({ status, title }: createIssueProps) => {
     const id = createUniqueId();
