@@ -16,13 +16,6 @@ export type IssueDispatchType = {
   updateIssue: (updated: Issue[]) => void;
 };
 
-export type updateIssueProps = {
-  id: string;
-  status: IssueStatus;
-  title: string;
-};
-
-export type createIssueProps = {
-  status: IssueStatus;
-  title: string;
-};
+export type UpdateIssueProps = Issue;
+export type CreateIssueProps = Omit<Issue, 'id'>;
+export type DeleteIssueProps = Omit<Issue, 'title'>;

@@ -3,7 +3,14 @@ import { useRecoilState } from 'recoil';
 
 import { issueAtom } from '@/atoms/issueAtom';
 import { requirementAtom } from '@/atoms/requirementAtom';
-import { createIssueProps, IssueDataType, IssueStatus, updateIssueProps } from '@/types/issue';
+import {
+  CreateIssueProps,
+  DeleteIssueProps,
+  Issue,
+  IssueDataType,
+  IssueStatus,
+  UpdateIssueProps,
+} from '@/types/issue';
 import { Requirement } from '@/types/requirement';
 import { createUniqueId } from '@/utils/uniqueId';
 
@@ -11,7 +18,7 @@ export function useIssue() {
   const [issueData, setIssueData] = useRecoilState<IssueDataType>(issueAtom);
   const [requireData, setRequireData] = useRecoilState<Requirement[]>(requirementAtom);
 
-  const createIssue = ({ status, title }: createIssueProps) => {
+  const createIssue = ({ status, title }: CreateIssueProps) => {
     const id = createUniqueId();
     setIssueData(
       produce(issueData, (draftIssue) => {
@@ -20,7 +27,7 @@ export function useIssue() {
     );
   };
 
-  const updateIssue = ({ id, status, title }: updateIssueProps) => {
+  const updateIssue = ({ id, status, title }: UpdateIssueProps) => {
     setIssueData(
       produce(issueData, (draftIssue) => {
         const issueIndex = draftIssue[status].findIndex((issue) => issue.id === id);
@@ -31,7 +38,7 @@ export function useIssue() {
     );
   };
 
-  const deleteIssue = ({ id, status }: { id: string; status: IssueStatus }) => {
+  const deleteIssue = ({ id, status }: DeleteIssueProps) => {
     setIssueData(
       produce(issueData, (draftIssue) => {
         const issueIndex = draftIssue[status].findIndex((issue) => issue.id === id);
@@ -48,7 +55,7 @@ export function useIssue() {
     );
   };
 
-  const getIssueById = ({ id }: { id: string }) => {
+  const getIssueById = ({ id }: { id: Issue['id'] }) => {
     for (let status in issueData) {
       const issue = issueData[status as keyof IssueDataType].find((issue) => issue.id === id);
       if (issue) return issue;
