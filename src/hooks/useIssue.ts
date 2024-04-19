@@ -3,7 +3,7 @@ import { useRecoilState } from 'recoil';
 
 import { issueAtom } from '@/atoms/issueAtom';
 import { requirementAtom } from '@/atoms/requirementAtom';
-import { createIssueProps, IssueDataType, IssueStatusType, updateIssueProps } from '@/types/issue';
+import { createIssueProps, IssueDataType, IssueStatus, updateIssueProps } from '@/types/issue';
 import { Requirement } from '@/types/requirement';
 import { createUniqueId } from '@/utils/uniqueId';
 
@@ -31,7 +31,7 @@ export function useIssue() {
     );
   };
 
-  const deleteIssue = ({ id, status }: { id: string; status: IssueStatusType }) => {
+  const deleteIssue = ({ id, status }: { id: string; status: IssueStatus }) => {
     setIssueData(
       produce(issueData, (draftIssue) => {
         const issueIndex = draftIssue[status].findIndex((issue) => issue.id === id);
@@ -61,7 +61,7 @@ export function useIssue() {
     sourceIndex,
     destinationIndex,
   }: {
-    status: IssueStatusType;
+    status: IssueStatus;
     sourceIndex: number;
     destinationIndex: number;
   }) => {
@@ -79,8 +79,8 @@ export function useIssue() {
     sourceIndex,
     destinationIndex,
   }: {
-    sourceStatus: IssueStatusType;
-    destinationStatus: IssueStatusType;
+    sourceStatus: IssueStatus;
+    destinationStatus: IssueStatus;
     sourceIndex: number;
     destinationIndex: number;
   }) => {

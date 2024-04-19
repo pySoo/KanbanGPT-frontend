@@ -5,7 +5,7 @@ import { params } from '@/constants/params';
 import { useIssue } from '@/hooks/useIssue';
 import { useModal } from '@/hooks/useModal';
 import { theme, ThemeType } from '@/styles/theme';
-import { IssueStateType } from '@/types/issue';
+import { Issue } from '@/types/issue';
 import { ModalType } from '@/types/modal';
 
 import IssueInfo from '../KanbanBoard/IssueInfo';
@@ -23,7 +23,7 @@ export default function IssueModal() {
     return null;
   }
 
-  const issueState: IssueStateType | undefined = getIssueById({ id: selectedIssueId });
+  const issueState: Issue | undefined = getIssueById({ id: selectedIssueId });
 
   if (!issueState) return null;
 

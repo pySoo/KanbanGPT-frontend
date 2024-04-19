@@ -5,14 +5,14 @@ import { useRecoilValue } from 'recoil';
 
 import deleteStateAtom from '@/atoms/deleteStateAtom';
 import { useIssue } from '@/hooks/useIssue';
-import { IssueStateType } from '@/types/issue';
+import { Issue } from '@/types/issue';
 
 import DeleteHoverBtn from '../common/DeleteHoverBtn';
 import DeleteConfirmation from '../Toast/DeleteConfirmation';
 import IssueInput from './IssueInput';
 
 type IssueTitleProps = {
-  issue?: IssueStateType;
+  issue?: Issue;
   autoFocus?: boolean;
   onBlur?: () => void;
   onCreateIssue?: (title: string) => void;

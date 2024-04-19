@@ -3,15 +3,15 @@ import { useState } from 'react';
 import { Droppable } from 'react-beautiful-dnd';
 
 import { useIssue } from '@/hooks/useIssue';
-import { IssueStateType, IssueStatusType } from '@/types/issue';
+import { Issue, IssueStatus } from '@/types/issue';
 
 import CreateIssueBtn from './CreateIssueBtn';
 import IssueMemo from './IssueMemo';
 import KanbanDraggable from './KanbanDraggable';
 
 type KanbanDroppableProps = {
-  status: IssueStatusType;
-  issueList?: IssueStateType[];
+  status: IssueStatus;
+  issueList?: Issue[];
 };
 
 export default function KanbanDroppable({ status, issueList }: KanbanDroppableProps) {

@@ -5,7 +5,7 @@ import { params } from '@/constants/params';
 import { useModal } from '@/hooks/useModal';
 import { useRequirement } from '@/hooks/useRequirement';
 import { theme, ThemeType } from '@/styles/theme';
-import { IssueStateType } from '@/types/issue';
+import { Issue } from '@/types/issue';
 import { ModalType } from '@/types/modal';
 
 import GPTIcon from '../icons/GPTIcon';
@@ -13,7 +13,7 @@ import IssuePreviewList from './IssuePreviewList';
 import IssueTitle from './IssueTitle';
 
 export interface IssueMemoProps extends React.ComponentProps<'div'> {
-  issue?: IssueStateType;
+  issue?: Issue;
   autoFocus?: boolean;
   onBlur?: () => void;
   onCreateIssue?: (title: string) => void;

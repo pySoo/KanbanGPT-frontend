@@ -4,7 +4,7 @@ import { DragDropContext, DropResult } from 'react-beautiful-dnd';
 import { kanbanBoardTitleData } from '@/constants/kanbanBoard';
 import { useIssue } from '@/hooks/useIssue';
 import useRequestAnimation from '@/hooks/useRequestAnimation';
-import { IssueStatusType } from '@/types/issue';
+import { IssueStatus } from '@/types/issue';
 
 import KanbanCard from './KanbanCard';
 
@@ -19,8 +19,8 @@ export default function KanbanBoard() {
   const handleDragEnd = ({ source, destination }: DropResult) => {
     if (!destination) return;
 
-    const sourceStatus = source.droppableId as IssueStatusType;
-    const destinationStatus = destination.droppableId as IssueStatusType;
+    const sourceStatus = source.droppableId as IssueStatus;
+    const destinationStatus = destination.droppableId as IssueStatus;
     const sourceIndex = source.index;
     const destinationIndex = destination.index;
 

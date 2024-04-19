@@ -1,11 +1,11 @@
 import { Draggable } from 'react-beautiful-dnd';
 
-import { IssueStateType } from '@/types/issue';
+import { Issue } from '@/types/issue';
 
 import IssueMemo from './IssueMemo';
 
 type KanbanDraggableProps = {
-  issue: IssueStateType;
+  issue: Issue;
   index: number;
 };
 

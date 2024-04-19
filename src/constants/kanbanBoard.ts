@@ -1,19 +1,19 @@
 import { theme } from '@/styles/theme';
-import { IssueStatusType } from '@/types/issue';
+import { IssueStatus } from '@/types/issue';
 
 export const kanbanBoardTitleData = [
   {
-    status: IssueStatusType.TODO,
+    status: IssueStatus.TODO,
     title: 'To do',
     labelColor: theme.colors.primary,
   },
   {
-    status: IssueStatusType.IN_PROGRESS,
+    status: IssueStatus.IN_PROGRESS,
     title: 'In progress',
     labelColor: theme.colors.green,
   },
   {
-    status: IssueStatusType.DONE,
+    status: IssueStatus.DONE,
     title: 'Done',
     labelColor: theme.colors.darkGreen,
   },
