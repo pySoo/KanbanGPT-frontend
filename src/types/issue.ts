@@ -1,4 +1,4 @@
-export type IssueDataType = Record<IssueStatus, Issue[]>;
+export type IssueData = Record<IssueStatus, Issue[]>;
 
 export enum IssueStatus {
   TODO = 'TODO',
@@ -10,10 +10,6 @@ export type Issue = {
   status: IssueStatus;
   id: string;
   title: string;
-};
-
-export type IssueDispatchType = {
-  updateIssue: (updated: Issue[]) => void;
 };
 
 export type UpdateIssueProps = Issue;

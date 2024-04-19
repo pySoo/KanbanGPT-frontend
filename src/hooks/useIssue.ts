@@ -7,7 +7,7 @@ import {
   CreateIssueProps,
   DeleteIssueProps,
   Issue,
-  IssueDataType,
+  IssueData,
   IssueStatus,
   UpdateIssueProps,
 } from '@/types/issue';
@@ -15,7 +15,7 @@ import { Requirement } from '@/types/requirement';
 import { createUniqueId } from '@/utils/uniqueId';
 
 export function useIssue() {
-  const [issueData, setIssueData] = useRecoilState<IssueDataType>(issueAtom);
+  const [issueData, setIssueData] = useRecoilState<IssueData>(issueAtom);
   const [requireData, setRequireData] = useRecoilState<Requirement[]>(requirementAtom);
 
   const createIssue = ({ status, title }: CreateIssueProps) => {
@@ -57,7 +57,7 @@ export function useIssue() {
 
   const getIssueById = ({ id }: { id: Issue['id'] }) => {
     for (let status in issueData) {
-      const issue = issueData[status as keyof IssueDataType].find((issue) => issue.id === id);
+      const issue = issueData[status as keyof IssueData].find((issue) => issue.id === id);
       if (issue) return issue;
     }
     return undefined;
