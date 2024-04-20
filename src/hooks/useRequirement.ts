@@ -44,7 +44,7 @@ export function useRequirement() {
   };
 
   const getRequireByIssueId = ({ issueId }: { issueId?: Requirement['issueId'] }) => {
-    if (!issueId) return undefined;
+    if (!issueId) return null;
     return requireList.filter((require) => require.issueId === issueId);
   };
 

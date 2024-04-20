@@ -60,7 +60,7 @@ export function useIssue() {
       const issue = issueData[status as keyof IssueData].find((issue) => issue.id === id);
       if (issue) return issue;
     }
-    return undefined;
+    return null;
   };
 
   const reorderIssue = ({

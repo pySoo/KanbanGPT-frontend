@@ -7,7 +7,7 @@ import RequirementInput from './RequirementInput';
 
 type RequirementListProps = {
   issueId: string;
-  requirements?: Requirement[];
+  requirements?: Requirement[] | null;
   onSelectId: (id?: string) => void;
 };
 
