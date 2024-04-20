@@ -6,8 +6,8 @@ import { useModal } from '@/hooks/useModal';
 import { theme, ThemeType } from '@/styles/theme';
 import { ModalType } from '@/types/modal';
 
-import IssueInfo from '../KanbanBoard/IssueInfo';
-import RequirementSection from '../Requirement/RequirementSection';
+import IssueInfo from '../KanbanBoard/Issue/IssueInfo';
+import RequirementSection from '../KanbanBoard/Requirement/RequirementSection';
 
 export default function IssueModal() {
   const { getIssueById } = useIssue();

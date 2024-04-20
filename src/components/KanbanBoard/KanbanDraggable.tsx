@@ -2,7 +2,7 @@ import { Draggable } from 'react-beautiful-dnd';
 
 import { Issue } from '@/types/issue';
 
-import IssueMemo from './IssueMemo';
+import IssueMemo from './Issue/IssueMemo';
 
 type KanbanDraggableProps = {
   issue: Issue;

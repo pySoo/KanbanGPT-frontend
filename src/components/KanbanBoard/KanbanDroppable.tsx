@@ -5,8 +5,8 @@ import { Droppable } from 'react-beautiful-dnd';
 import { useIssue } from '@/hooks/useIssue';
 import { Issue, IssueStatus } from '@/types/issue';
 
-import CreateIssueBtn from './CreateIssueBtn';
-import IssueMemo from './IssueMemo';
+import CreateIssueBtn from './Issue/CreateIssueBtn';
+import IssueMemo from './Issue/IssueMemo';
 import KanbanDraggable from './KanbanDraggable';
 
 type KanbanDroppableProps = {

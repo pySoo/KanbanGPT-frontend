@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 
 import { Issue, IssueStatus } from '@/types/issue';
 
-import Label from '../common/Label';
+import Label from '../Shared/Label';
 import KanbanDroppable from './KanbanDroppable';
 
 type KanbanCardProps = {
