@@ -2,6 +2,7 @@ import { css } from '@emotion/react';
 import { useEffect, useState } from 'react';
 import { Panel, PanelGroup } from 'react-resizable-panels';
 
+import { useGetSearchParams } from '@/hooks/useGetSearchParams';
 import { useRequirement } from '@/hooks/useRequirement';
 import useResize from '@/hooks/useResize';
 import { theme } from '@/styles/theme';
@@ -11,13 +12,13 @@ import ResizeHandle from '../common/ResizeHandle';
 import GPTPrompt from '../gpt/GptPrompt';
 import RequirementList from './RequirementList';
 
-type RequirementSectionProps = {
-  selectedIssueId: string;
-};
-
-export default function RequirementSection({ selectedIssueId }: RequirementSectionProps) {
+export default function RequirementSection() {
   const { width } = useResize();
   const panelDirection = width > theme.screens.md ? 'horizontal' : 'vertical';
+
+  const { selectedIssueId } = useGetSearchParams();
+
+  if (selectedIssueId == null) return;
 
   const [selectedRequireId, setSelectedRequireId] = useState<string | undefined>(undefined);
   const [selectedRequire, setSelectedRequire] = useState<Requirement | undefined>(undefined);

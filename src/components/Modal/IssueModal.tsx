@@ -1,7 +1,6 @@
 import { css } from '@emotion/react';
-import { useSearchParams } from 'react-router-dom';
 
-import { params } from '@/constants/params';
+import { useGetSearchParams } from '@/hooks/useGetSearchParams';
 import { useIssue } from '@/hooks/useIssue';
 import { useModal } from '@/hooks/useModal';
 import { theme, ThemeType } from '@/styles/theme';
@@ -14,10 +13,9 @@ export default function IssueModal() {
   const { getIssueById } = useIssue();
   const { closeModal } = useModal();
 
-  const [searchParams] = useSearchParams();
-  const selectedIssueId = searchParams.get(params.selectedIssueId);
+  const { selectedIssueId } = useGetSearchParams();
 
-  if (!selectedIssueId) {
+  if (selectedIssueId == null) {
     closeModal({ type: ModalType.ISSUE });
     return null;
   }
@@ -30,7 +28,7 @@ export default function IssueModal() {
     <div css={issueModalStyle(theme)}>
       <IssueInfo issueTitle={issueState.title} />
       <section className="requirement-section">
-        <RequirementSection selectedIssueId={selectedIssueId} />
+        <RequirementSection />
       </section>
     </div>
   );
