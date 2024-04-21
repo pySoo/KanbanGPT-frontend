@@ -8,4 +8,4 @@ export type Requirement = {
 
 export type CreateRequireProps = Pick<Requirement, 'issueId' | 'title'>;
 
-export type UpdateRequireProps = Omit<Requirement, 'issueId'>;
+export type UpdateRequireProps = Partial<Omit<Requirement, 'issueId'>>;
