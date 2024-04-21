@@ -20,8 +20,8 @@ export default function RequirementSection() {
 
   if (selectedIssueId == null) return;
 
-  const [selectedRequireId, setSelectedRequireId] = useState<string | undefined>(undefined);
-  const [selectedRequire, setSelectedRequire] = useState<Requirement | undefined>(undefined);
+  const [selectedRequireId, setSelectedRequireId] = useState<string>();
+  const [selectedRequire, setSelectedRequire] = useState<Requirement>();
   const { getRequireByIssueId } = useRequirement();
 
   const requirementList = getRequireByIssueId({ issueId: selectedIssueId });
