@@ -31,7 +31,7 @@ export default function RequirementSection() {
   };
 
   useEffect(() => {
-    const filteredRequire = requirementList?.filter((value) => value.id === selectedRequireId)[0];
+    const filteredRequire = requirementList?.find((value) => value.id === selectedRequireId);
     setSelectedRequire(filteredRequire);
   }, [selectedRequireId, requirementList]);
 
