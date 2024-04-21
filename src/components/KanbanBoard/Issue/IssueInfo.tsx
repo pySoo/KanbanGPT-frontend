@@ -1,17 +1,19 @@
 import { css } from '@emotion/react';
 
 import { theme, ThemeType } from '@/styles/theme';
+import { Issue } from '@/types/issue';
 
 import DevEnvironmentForm from './DevEnvironmentForm';
 
 type IssueInfoProps = {
-  issueTitle: string;
+  issue: Issue;
 };
 
-export default function IssueInfo({ issueTitle }: IssueInfoProps) {
+export default function IssueInfo({ issue }: IssueInfoProps) {
+  const { title } = issue;
   return (
     <section css={issueInfoStyle(theme)}>
-      <h2 className="issue-modal-title">{issueTitle}</h2>
+      <h2 className="issue-modal-title">{title}</h2>
       <DevEnvironmentForm />
     </section>
   );

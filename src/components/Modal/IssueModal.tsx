@@ -20,13 +20,13 @@ export default function IssueModal() {
     return null;
   }
 
-  const issueState = getIssueById({ id: selectedIssueId });
+  const currentIssue = getIssueById({ id: selectedIssueId });
 
-  if (issueState === null) return null;
+  if (currentIssue === null) return null;
 
   return (
     <div css={issueModalStyle(theme)}>
-      <IssueInfo issueTitle={issueState.title} />
+      <IssueInfo issue={currentIssue} />
       <section className="requirement-section">
         <RequirementSection />
       </section>
