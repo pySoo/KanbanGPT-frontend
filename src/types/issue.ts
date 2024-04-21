@@ -1,28 +1,17 @@
-export type IssueDataType = Record<IssueStatusType, IssueStateType[]>;
+export type IssueData = Record<IssueStatus, Issue[]>;
 
-export enum IssueStatusType {
+export enum IssueStatus {
   TODO = 'TODO',
   IN_PROGRESS = 'IN_PROGRESS',
   DONE = 'DONE',
 }
 
-export type IssueStateType = {
-  status: IssueStatusType;
+export type Issue = {
+  status: IssueStatus;
   id: string;
   title: string;
 };
 
-export type IssueDispatchType = {
-  updateIssue: (updated: IssueStateType[]) => void;
-};
-
-export type updateIssueProps = {
-  id: string;
-  status: IssueStatusType;
-  title: string;
-};
-
-export type createIssueProps = {
-  status: IssueStatusType;
-  title: string;
-};
+export type UpdateIssueProps = Issue;
+export type CreateIssueProps = Omit<Issue, 'id'>;
+export type DeleteIssueProps = Omit<Issue, 'title'>;

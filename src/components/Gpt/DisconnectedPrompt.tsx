@@ -1,14 +1,14 @@
 import { css } from '@emotion/react';
 
 import { theme, ThemeType } from '@/styles/theme';
-import { RequirementStateType } from '@/types/requirement';
+import { Requirement } from '@/types/requirement';
 
 import CodeBlock from './CodeBlock';
 import GPTAPIKeyInfo from './Information/GPTAPIKeyInfo';
 import GPTSearchInfo from './Information/GPTSearchInfo';
 
 type DisconnectedPromptProps = {
-  requirement?: RequirementStateType;
+  requirement?: Requirement;
 };
 
 export default function DisconnectedPrompt({ requirement }: DisconnectedPromptProps) {

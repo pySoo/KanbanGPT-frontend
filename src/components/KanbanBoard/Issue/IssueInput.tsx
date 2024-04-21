@@ -4,12 +4,12 @@ import { toast } from 'react-toastify';
 import useInput from '@/hooks/useInput';
 import { useIssue } from '@/hooks/useIssue';
 import { theme, ThemeType } from '@/styles/theme';
-import { IssueStateType } from '@/types/issue';
+import { Issue } from '@/types/issue';
 
 import Textarea from '../../Shared/Textarea';
 
 export interface IssueInputProps extends React.ComponentProps<'form'> {
-  issue?: IssueStateType;
+  issue?: Issue;
   autoFocus?: boolean;
   onBlur?: () => void;
   onCreateIssue?: (title: string) => void;

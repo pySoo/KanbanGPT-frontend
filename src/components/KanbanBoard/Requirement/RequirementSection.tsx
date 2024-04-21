@@ -2,27 +2,26 @@ import { css } from '@emotion/react';
 import { useEffect, useState } from 'react';
 import { Panel, PanelGroup } from 'react-resizable-panels';
 
+import { useGetSearchParams } from '@/hooks/useGetSearchParams';
 import { useRequirement } from '@/hooks/useRequirement';
 import useResize from '@/hooks/useResize';
 import { theme } from '@/styles/theme';
-import { RequirementStateType } from '@/types/requirement';
+import { Requirement } from '@/types/requirement';
 
 import GPTPrompt from '../../Gpt/GptPrompt';
 import ResizeHandle from '../../Shared/ResizeHandle';
 import RequirementList from './RequirementList';
 
-type RequirementSectionProps = {
-  selectedIssueId: string;
-};
-
-export default function RequirementSection({ selectedIssueId }: RequirementSectionProps) {
+export default function RequirementSection() {
   const { width } = useResize();
   const panelDirection = width > theme.screens.md ? 'horizontal' : 'vertical';
 
-  const [selectedRequireId, setSelectedRequireId] = useState<string | undefined>(undefined);
-  const [selectedRequire, setSelectedRequire] = useState<RequirementStateType | undefined>(
-    undefined,
-  );
+  const { selectedIssueId } = useGetSearchParams();
+
+  if (selectedIssueId == null) return;
+
+  const [selectedRequireId, setSelectedRequireId] = useState<string>();
+  const [selectedRequire, setSelectedRequire] = useState<Requirement>();
   const { getRequireByIssueId } = useRequirement();
 
   const requirementList = getRequireByIssueId({ issueId: selectedIssueId });
@@ -32,7 +31,7 @@ export default function RequirementSection({ selectedIssueId }: RequirementSecti
   };
 
   useEffect(() => {
-    const filteredRequire = requirementList?.filter((value) => value.id === selectedRequireId)[0];
+    const filteredRequire = requirementList?.find((value) => value.id === selectedRequireId);
     setSelectedRequire(filteredRequire);
   }, [selectedRequireId, requirementList]);
 

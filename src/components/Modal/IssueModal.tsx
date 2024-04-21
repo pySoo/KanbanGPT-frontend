@@ -1,11 +1,9 @@
 import { css } from '@emotion/react';
-import { useSearchParams } from 'react-router-dom';
 
-import { params } from '@/constants/params';
+import { useGetSearchParams } from '@/hooks/useGetSearchParams';
 import { useIssue } from '@/hooks/useIssue';
 import { useModal } from '@/hooks/useModal';
 import { theme, ThemeType } from '@/styles/theme';
-import { IssueStateType } from '@/types/issue';
 import { ModalType } from '@/types/modal';
 
 import IssueInfo from '../KanbanBoard/Issue/IssueInfo';
@@ -15,23 +13,22 @@ export default function IssueModal() {
   const { getIssueById } = useIssue();
   const { closeModal } = useModal();
 
-  const [searchParams] = useSearchParams();
-  const selectedIssueId = searchParams.get(params.selectedIssueId);
+  const { selectedIssueId } = useGetSearchParams();
 
-  if (!selectedIssueId) {
+  if (selectedIssueId == null) {
     closeModal({ type: ModalType.ISSUE });
     return null;
   }
 
-  const issueState: IssueStateType | undefined = getIssueById({ id: selectedIssueId });
+  const currentIssue = getIssueById({ id: selectedIssueId });
 
-  if (!issueState) return null;
+  if (currentIssue === null) return null;
 
   return (
     <div css={issueModalStyle(theme)}>
-      <IssueInfo issueTitle={issueState.title} />
+      <IssueInfo issue={currentIssue} />
       <section className="requirement-section">
-        <RequirementSection selectedIssueId={selectedIssueId} />
+        <RequirementSection />
       </section>
     </div>
   );

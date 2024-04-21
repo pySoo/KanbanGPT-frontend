@@ -3,15 +3,22 @@ import { useRecoilState } from 'recoil';
 
 import { issueAtom } from '@/atoms/issueAtom';
 import { requirementAtom } from '@/atoms/requirementAtom';
-import { createIssueProps, IssueDataType, IssueStatusType, updateIssueProps } from '@/types/issue';
-import { RequirementStateType } from '@/types/requirement';
+import {
+  CreateIssueProps,
+  DeleteIssueProps,
+  Issue,
+  IssueData,
+  IssueStatus,
+  UpdateIssueProps,
+} from '@/types/issue';
+import { Requirement } from '@/types/requirement';
 import { createUniqueId } from '@/utils/uniqueId';
 
 export function useIssue() {
-  const [issueData, setIssueData] = useRecoilState<IssueDataType>(issueAtom);
-  const [requireData, setRequireData] = useRecoilState<RequirementStateType[]>(requirementAtom);
+  const [issueData, setIssueData] = useRecoilState<IssueData>(issueAtom);
+  const [requireData, setRequireData] = useRecoilState<Requirement[]>(requirementAtom);
 
-  const createIssue = ({ status, title }: createIssueProps) => {
+  const createIssue = ({ status, title }: CreateIssueProps) => {
     const id = createUniqueId();
     setIssueData(
       produce(issueData, (draftIssue) => {
@@ -20,7 +27,7 @@ export function useIssue() {
     );
   };
 
-  const updateIssue = ({ id, status, title }: updateIssueProps) => {
+  const updateIssue = ({ id, status, title }: UpdateIssueProps) => {
     setIssueData(
       produce(issueData, (draftIssue) => {
         const issueIndex = draftIssue[status].findIndex((issue) => issue.id === id);
@@ -31,7 +38,7 @@ export function useIssue() {
     );
   };
 
-  const deleteIssue = ({ id, status }: { id: string; status: IssueStatusType }) => {
+  const deleteIssue = ({ id, status }: DeleteIssueProps) => {
     setIssueData(
       produce(issueData, (draftIssue) => {
         const issueIndex = draftIssue[status].findIndex((issue) => issue.id === id);
@@ -48,12 +55,12 @@ export function useIssue() {
     );
   };
 
-  const getIssueById = ({ id }: { id: string }) => {
+  const getIssueById = ({ id }: { id: Issue['id'] }) => {
     for (let status in issueData) {
-      const issue = issueData[status as keyof IssueDataType].find((issue) => issue.id === id);
+      const issue = issueData[status as keyof IssueData].find((issue) => issue.id === id);
       if (issue) return issue;
     }
-    return undefined;
+    return null;
   };
 
   const reorderIssue = ({
@@ -61,7 +68,7 @@ export function useIssue() {
     sourceIndex,
     destinationIndex,
   }: {
-    status: IssueStatusType;
+    status: IssueStatus;
     sourceIndex: number;
     destinationIndex: number;
   }) => {
@@ -79,8 +86,8 @@ export function useIssue() {
     sourceIndex,
     destinationIndex,
   }: {
-    sourceStatus: IssueStatusType;
-    destinationStatus: IssueStatusType;
+    sourceStatus: IssueStatus;
+    destinationStatus: IssueStatus;
     sourceIndex: number;
     destinationIndex: number;
   }) => {

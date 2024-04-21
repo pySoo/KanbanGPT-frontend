@@ -1,15 +1,15 @@
 import { css } from '@emotion/react';
 
-import { IssueStateType, IssueStatusType } from '@/types/issue';
+import { Issue, IssueStatus } from '@/types/issue';
 
 import Label from '../Shared/Label';
 import KanbanDroppable from './KanbanDroppable';
 
 type KanbanCardProps = {
-  status: IssueStatusType;
+  status: IssueStatus;
   title: string;
   labelColor: string;
-  issueList?: IssueStateType[];
+  issueList?: Issue[];
 };
 
 export default function KanbanCard({ status, title, labelColor, issueList }: KanbanCardProps) {

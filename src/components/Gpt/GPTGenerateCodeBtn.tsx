@@ -8,13 +8,13 @@ import { devEnvironmentAtom } from '@/atoms/devEnvironmentAtom';
 import loadingStateAtom from '@/atoms/loadingStateAtom';
 import useConnectGpt from '@/hooks/useConnectGpt';
 import { useRequirement } from '@/hooks/useRequirement';
-import { RequirementStateType } from '@/types/requirement';
+import { Requirement } from '@/types/requirement';
 import { generateSearchPrompt } from '@/utils/gpt';
 
 import GPTIcon from '../Shared/Icons/GPTIcon';
 
 type GPTGenerateCodeBtnProps = {
-  requirement: RequirementStateType;
+  requirement: Requirement;
   onSelectId: (id?: string) => void;
 };
 
