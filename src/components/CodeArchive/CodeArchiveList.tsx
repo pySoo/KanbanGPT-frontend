@@ -1,9 +1,9 @@
-import { RequirementStateType } from '@/types/requirement';
+import { Requirement } from '@/types/requirement';
 
 import CodeArchiveItem from './CodeArchiveItem';
 
 interface CodeArchiveListProps {
-  requireList: RequirementStateType[];
+  requireList: Requirement[];
 }
 
 export default function CodeArchiveList({ requireList }: CodeArchiveListProps) {
