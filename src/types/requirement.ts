@@ -1,19 +1,11 @@
-export type RequirementStateType = {
-  issueId: string;
+export type Requirement = {
   id: string;
+  issueId: string;
   title: string;
   isCompleted: boolean;
   gpt?: string;
 };
 
-export type createRequireType = {
-  issueId: string;
-  title: string;
-};
+export type CreateRequireProps = Pick<Requirement, 'issueId' | 'title'>;
 
-export type updateRequireType = {
-  id: string;
-  title?: string;
-  isCompleted?: boolean;
-  gpt?: string;
-};
+export type UpdateRequireProps = Partial<Omit<Requirement, 'issueId'>>;

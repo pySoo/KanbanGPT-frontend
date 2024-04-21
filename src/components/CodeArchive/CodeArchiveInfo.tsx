@@ -3,7 +3,7 @@ import { Comment } from 'react-loader-spinner';
 
 import { theme } from '@/styles/theme';
 
-import CodeBlock from '../gpt/CodeBlock';
+import CodeBlock from '../Gpt/CodeBlock';
 
 export default function CodeArchiveInfo() {
   return (

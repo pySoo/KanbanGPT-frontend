@@ -1,13 +1,11 @@
-import { Suspense } from 'react';
-import { ErrorBoundary } from 'react-error-boundary';
 import { Outlet } from 'react-router-dom';
 
-import ErrorFallback from '@/components/common/ErrorFallback';
-import Header from '@/components/common/Header';
-import Navbar from '@/components/common/Navbar';
-import SkeletonBoard from '@/components/common/SkeletonBoard';
-import ToastContainer from '@/components/common/ToastContainer';
 import ModalContainer from '@/components/Modal/ModalContainer';
+import AsyncBoundary from '@/components/Shared/AsyncBoundary';
+import Header from '@/components/Shared/Header';
+import Navbar from '@/components/Shared/Navbar';
+import SkeletonBoard from '@/components/Shared/Skeleton/SkeletonBoard';
+import ToastContainer from '@/components/Shared/Toast/ToastContainer';
 import { useToggle } from '@/hooks/useToggle';
 
 export default function Layout() {
@@ -17,11 +15,9 @@ export default function Layout() {
       <Header onToggle={toggle} />
       <Navbar isNavOpen={isToggled} onToggle={toggle} />
 
-      <ErrorBoundary FallbackComponent={ErrorFallback}>
-        <Suspense fallback={<SkeletonBoard />}>
-          <Outlet />
-        </Suspense>
-      </ErrorBoundary>
+      <AsyncBoundary suspenseFallback={<SkeletonBoard />}>
+        <Outlet />
+      </AsyncBoundary>
 
       <ModalContainer />
       <ToastContainer />

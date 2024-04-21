@@ -1,13 +1,13 @@
 import { css } from '@emotion/react';
 
 import { theme, ThemeType } from '@/styles/theme';
-import { RequirementStateType } from '@/types/requirement';
+import { Requirement } from '@/types/requirement';
 
-import Label from '../common/Label';
-import CodeBlock from '../gpt/CodeBlock';
+import CodeBlock from '../Gpt/CodeBlock';
+import Label from '../Shared/Label';
 
 type CodeArchiveItemProps = {
-  requirement: RequirementStateType;
+  requirement: Requirement;
 };
 
 export default function CodeArchiveItem({ requirement }: CodeArchiveItemProps) {
@@ -15,7 +15,7 @@ export default function CodeArchiveItem({ requirement }: CodeArchiveItemProps) {
     <li css={codeArchiveItemStyle(theme)}>
       <div className="archive-requirement-title">
         <Label>요구사항</Label>
-        <p>{requirement.title}</p>
+        <p className="title">{requirement.title}</p>
       </div>
       {requirement.gpt && (
         <div className="archive-code-block">
@@ -33,15 +33,15 @@ const codeArchiveItemStyle = (theme: ThemeType) => css`
   flex-direction: column;
   gap: 10px;
 
-  p {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: ${theme.colors.green};
-  }
-
   .archive-requirement-title {
     display: flex;
     gap: 10px;
+
+    .title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: ${theme.colors.green};
+    }
   }
 
   .archive-code-block {

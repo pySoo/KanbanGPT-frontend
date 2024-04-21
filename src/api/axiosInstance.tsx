@@ -1,7 +1,7 @@
 import axios, { AxiosError, AxiosResponse } from 'axios';
 import { toast } from 'react-toastify';
 
-import ConnectToGptModal from '@/components/Toast/ConnectToGptModal';
+import ConnectToGptModal from '@/components/Modal/ConnectToGptModal';
 import { CustomInstance } from '@/types/api';
 
 const axiosInstance: CustomInstance = axios.create({

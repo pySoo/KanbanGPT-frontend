@@ -2,9 +2,9 @@ import { css } from '@emotion/react';
 
 import { theme, ThemeType } from '@/styles/theme';
 
-import APIInfoSection from '../gpt/info/APIInfoSection';
-import APISetupSection from '../gpt/info/APISetupSection';
-import APITestSection from '../gpt/info/APITestSection';
+import APIInfoSection from '../Gpt/Information/APIInfoSection';
+import APISetupSection from '../Gpt/Information/APISetupSection';
+import APITestSection from '../Gpt/Information/APITestSection';
 
 export default function GPTInfoModal() {
   return (

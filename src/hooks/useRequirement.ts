@@ -2,13 +2,13 @@ import { produce } from 'immer';
 import { useRecoilState } from 'recoil';
 
 import { requirementAtom } from '@/atoms/requirementAtom';
-import { createRequireType, RequirementStateType, updateRequireType } from '@/types/requirement';
+import { CreateRequireProps, Requirement, UpdateRequireProps } from '@/types/requirement';
 import { createUniqueId } from '@/utils/uniqueId';
 
 export function useRequirement() {
-  const [requireList, setRequireList] = useRecoilState<RequirementStateType[]>(requirementAtom);
+  const [requireList, setRequireList] = useRecoilState<Requirement[]>(requirementAtom);
 
-  const createRequire = ({ issueId, title }: createRequireType) => {
+  const createRequire = ({ issueId, title }: CreateRequireProps) => {
     const id = createUniqueId();
     setRequireList(
       produce(requireList, (draftRequire) => {
@@ -22,7 +22,7 @@ export function useRequirement() {
     );
   };
 
-  const updateRequire = ({ id, title, isCompleted, gpt }: updateRequireType) => {
+  const updateRequire = ({ id, title, isCompleted, gpt }: UpdateRequireProps) => {
     setRequireList(
       produce(requireList, (draftRequire) => {
         const requireToUpdate = draftRequire.find((require) => require.id === id);
@@ -35,7 +35,7 @@ export function useRequirement() {
     );
   };
 
-  const deleteRequire = ({ id }: { id: string }) => {
+  const deleteRequire = ({ id }: { id: Requirement['id'] }) => {
     setRequireList(
       produce(requireList, (draftRequire) => {
         return draftRequire.filter((require) => require.id !== id);
@@ -43,8 +43,8 @@ export function useRequirement() {
     );
   };
 
-  const getRequireByIssueId = ({ issueId }: { issueId?: string }) => {
-    if (!issueId) return undefined;
+  const getRequireByIssueId = ({ issueId }: { issueId?: Requirement['issueId'] }) => {
+    if (!issueId) return null;
     return requireList.filter((require) => require.issueId === issueId);
   };
 
